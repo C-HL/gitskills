@@ -1,0 +1,38 @@
+{layout name="layout"}
+	<div class="row">
+		<a href="/teacher/user/add">添加管理员</a>
+		<form action="/teacher/user/query" method="post">
+		<div>
+			性别:<input type="tetx" placeholder="请输入...." name="sex" value="">
+			姓名:<input type="tetx" placeholder="请输入...." name="name" value="">
+			<button type="submit">搜索</button>
+		</div>
+	</form>
+        <div class="col-md-12">
+			<table border="1" class="table table-hover table-bordered">
+				<tr class="info">
+					<td>ID</td>
+					<td>姓名</td>
+					<td>性别</td>
+					<td>邮箱</td>
+					<td>密码</td>
+					<td>编辑</td>
+				</tr>
+				{volist name="list" id="vo"}
+				<tr>
+					<td>{$vo.id}</td>
+					<td>{$vo.name}</td>
+					<td>{$vo.sex}</td>
+					<td>{$vo.email}</td>
+					<td>{$vo.password}</td>
+					<td>
+						<a href="/teacher/user/edit?id={$vo.id}">修改</a>
+						<a href="/teacher/user/delete?id={$vo.id}">删除</a>
+					</td>
+				</tr>
+				{/volist}
+			</table>
+
+		</div>
+    </div>
+{$page}

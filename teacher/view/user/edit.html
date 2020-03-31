@@ -1,0 +1,16 @@
+{layout name="layout"}
+<h3>修改信息</h3>
+<form action="/teacher/user/update" method="post">
+	<input type="hidden" name="id" value="{$user.id}">
+	<div>姓名:</div> 
+	<div><input type="text" name="name" value="{$user.name}"></div>
+	<div>性别:</div> 
+	<div><input type="text" name="sex" value="{$user.sex}"></div>
+	<div>密码: </div>
+	<div><input type="password" name="password" value="{$user.password}"></div>
+	<div>确认密码:</div> 
+	<div><input type="password" name="repassword" value="{$user.repassword}"></div>
+	<div>邮箱: </div>
+	<div><input type="email" name="email" value="{$user.email}"></div>
+	<input type="submit" name="" value="提交">
+</form>

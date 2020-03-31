@@ -1,0 +1,21 @@
+{layout name="layout"}
+	<div class="col-md-12">
+			<table border="1" class="table table-hover table-bordered">
+				<tr class="info">
+					<td>ID</td>
+					<td>姓名</td>
+					<td>性别</td>
+					<td>邮箱</td>
+					<td>密码</td>
+				</tr>
+				{volist name="list" id="vo"}
+				<tr>
+					<td>{$vo.id}</td>
+					<td>{$vo.name}</td>
+					<td>{$vo.sex}</td>
+					<td>{$vo.email}</td>
+					<td>{$vo.password}</td>
+				</tr>
+				{/volist}
+			</table>
+		</div>

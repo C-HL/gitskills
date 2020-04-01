@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录页面</title>
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+</head>
+<body class="container">
+	<h3> <a href="/teacher/index/index">登录</a>|<a href="/teacher/register/register">注册</a></h3>
+	<form action="login" method="post" class="col-md-12">
+		<div>用户名</div>
+		<div><input type="text" name="name" placeholder="登录账号" data-validate="required:请填写账号"></div>
+		
+		<div>密码 </div>
+		<div><input type="password" name="password" placeholder="登录密码" data-validate="required:请填写密码"></div>
+		
+		<div>验证码</div> 
+		<div><input type="captcha" name="captcha" placeholder="填写右侧的验证码" data-validate="required:请填写右侧的验证码">
+			<img src="{:captcha_src()}" alt="captcha" style="height: 40px"  onclick ="this.src=this.src+'?t='+Math.random()" >
+		</div>
+		
+		<div>
+			<input type="submit" name="" value="登录">
+		</div>
+	</form>
+	 
+</body>
+</html>
